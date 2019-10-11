@@ -14,23 +14,24 @@ adoptersRouter
     }
   })
   .post(jsonBodyParser, (req, res) => {
+    console.log(store.adopters);
     if (!store.adopters.isEmpty()) {
       const duplicate = store.adopters.display().find(function(element) {
         return element === req.body.name;
       });
-      if (duplicate === null) {
+      if (duplicate === undefined) {
         store.adopters.enqueue(req.body.name);
         console.log('1');
-        res.status(2011).json(store.adopters.peek());
+        res.status(201).json(store.adopters.peek());
       } else {
         console.log('2');
-        res.status(204).json('duplicate');
+        res.status(200).json('duplicate');
       }
     } else {
-      store.adopters.enqueue(req.body.name)
-      console.log('3')
-      res.status(201).json(store.adopters.peek())
+      store.adopters.enqueue(req.body.name);
+      console.log('3');
+      res.status(201).json(store.adopters.peek());
     }
-  })
-  
+  });
+
 module.exports = adoptersRouter;

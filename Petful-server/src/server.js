@@ -10,7 +10,6 @@ const historyRouter = require('./history/history-router');
 const app = express();
 app.use(cors());
 
-// Catch-all 404
 app.use(
   morgan(config.NODE_ENV === 'production' ? 'tiny' : 'common', {
     skip: () => config.NODE_ENV === 'test'
@@ -20,7 +19,7 @@ app.use(
 app.use('/api/dog', dogsRouter);
 app.use('/api/cat', catsRouter);
 app.use('/api/adopters', adoptersRouter);
-app.use('./api/history', historyRouter);
+app.use('/api/history', historyRouter);
 
 // Catch-all Error handler
 // Add NODE_ENV check to prevent stacktrace leak
