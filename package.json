@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "author": "Alex Cumbo",
+  "author": "Hector and Cody",
   "license": "UNLICENSED",
   "main": "Petful-server/src/server.js",
   "scripts": {
@@ -17,6 +17,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "faker": "^4.1.0",
+    "morgan": "^1.9.1",
     "nodemon": "^1.19.3"
   }
 }
