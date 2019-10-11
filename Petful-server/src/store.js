@@ -102,6 +102,9 @@ store.populateCats();
 
 const adopters = new queue();
 
+adopters.enqueue('Hector');
+adopters.enqueue('Cody');
+
 store.adopters = adopters;
 
 // add history to store
