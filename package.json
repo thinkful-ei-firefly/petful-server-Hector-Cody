@@ -5,10 +5,13 @@
   "keywords": [],
   "author": "Alex Cumbo",
   "license": "UNLICENSED",
-  "main": "server.js",
+  "main": "Petful-server/src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node Petful-server/src/server.js",
+    "dev": "nodemon Petful-server/src/server.js",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku master"
   },
   "dependencies": {
     "cors": "^2.8.5",
