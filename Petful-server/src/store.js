@@ -29,7 +29,8 @@ const dogsArray = [
     sex: 'Male',
     age: 3,
     breed: 'Golden Retriever',
-    story: 'Owner Passed away'
+    story: 'Owner Passed away',
+    type: 'Dog'
   },
   {
     imageURL:
@@ -39,7 +40,8 @@ const dogsArray = [
     sex: 'Female',
     age: 7,
     breed: 'Dalmatian',
-    story: 'Found on the streets'
+    story: 'Found on the streets',
+    type: 'Dog'
   },
   {
     imageURL:
@@ -49,7 +51,8 @@ const dogsArray = [
     sex: 'Male',
     age: 12,
     breed: 'English Bulldog',
-    story: 'given up by owner'
+    story: 'given up by owner',
+    type: 'Dog'
   }
 ];
 
@@ -67,7 +70,8 @@ const catsArray = [
     sex: 'Female',
     age: 2,
     breed: 'Bengal',
-    story: 'Thrown on the street'
+    story: 'Thrown on the street',
+    type: 'cat'
   },
   {
     imageURL:
@@ -77,7 +81,8 @@ const catsArray = [
     sex: 'Male',
     age: 1,
     breed: 'Persian',
-    story: 'Too crazy for previous owner'
+    story: 'Too crazy for previous owner',
+    type: 'cat'
   },
   {
     imageURL:
@@ -87,7 +92,8 @@ const catsArray = [
     sex: 'Female',
     age: 6,
     breed: 'Siamese',
-    story: 'Abandoned'
+    story: 'Abandoned',
+    type: 'cat'
   }
 ];
 store.populateCats();
