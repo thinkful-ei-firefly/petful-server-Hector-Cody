@@ -8,7 +8,7 @@ const adoptersRouter = require('./adopters/adopters-router');
 const historyRouter = require('./history/history-router');
 
 const app = express();
-//app.use(cors());
+app.use(cors());
 
 // Catch-all 404
 app.use(
