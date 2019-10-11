@@ -21,13 +21,16 @@ adoptersRouter
       if (duplicate === null) {
         store.adopters.enqueue(req.body.name);
         console.log('1');
-        res.status(204).json('duplicate');
+        res.status(2011).json(store.adopters.peek());
       } else {
-        store.adopters.enqueue(req.body.name);
         console.log('2');
-        res.status(201).json(store.adopters.peek());
+        res.status(204).json('duplicate');
       }
+    } else {
+      store.adopters.enqueue(req.body.name)
+      console.log('3')
+      res.status(201).json(store.adopters.peek())
     }
-  });
-
+  })
+  
 module.exports = adoptersRouter;
